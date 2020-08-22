@@ -1,0 +1,35 @@
+<!-- LOGO -->
+<div class="logo navbar">
+  <a href="#" class="navbar-brand"><img class="image" src="./assets/img/fitness_logo1.jpg" height="80px" width="300px" alt="Fitness Tracker Logo"/></a> 
+</div>
+
+<!-- NAVBAR -->
+<div class="nav-bar navbar navbar-expand-lg navbar-light">
+  <div class="collapse navbar-collapse ">
+      <ul class="navbar-nav">
+          <li class="nav-item font-weight-bold"><a routerLink="/landing-page" class="nav-link">Home</a></li>
+          <li class="nav-item font-weight-bold"><a routerLink="/place-fitness-trainer-appointment" class="nav-link">Place Appointment</a></li>
+          <li class="nav-item font-weight-bold"><a routerLink="/view-appointment" class="nav-link">View Appointment</a></li>
+          <li class="nav-item font-weight-bold"><a routerLink="/contact-us" class="nav-link">Contact Us</a></li>
+      </ul>
+  </div> 
+</div>
+<!-- MAIN CONTENT -->
+
+<div class="row col-12">
+  <!-- SIDEBAR -->
+  <div class="col-2 sidebar navbar-dark bg-dark">
+          <ul class="navbar-nav">
+              <li class="nav-item side-item"><a routerLink="/landing-page" class="nav-link">Home</a></li>
+              <li class="nav-item  side-item"><a routerLink="/place-fitness-trainer-appointment" class="nav-link">Place Appointment</a></li>
+              <li class="nav-item  side-item"><a routerLink="/view-appointment" class="nav-link">View Appointment</a></li>
+              <li class="nav-item  side-item"><a routerLink="/contact-us" class="nav-link">Contact Us</a></li>
+          </ul>
+  </div>
+  <!-- RIGHT CONTENT -->
+  <div class="col-10">
+      <router-outlet></router-outlet>
+  </div>
+
+</div>
+

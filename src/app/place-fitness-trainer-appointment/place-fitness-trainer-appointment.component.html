@@ -1,0 +1,136 @@
+<h3 class="mb-2">Kindly fill the details</h3>
+<hr/>
+<div class="container row mx-auto" style="width: 600px">
+	<form>
+		<div class="row">
+			<div class="col-6">
+				<!--  First Name -->
+				<div class="form-group">
+					<label for="firstname">First Name</label>
+					<input type="text" autofocus required #firstname="ngModel" [class.is-invalid]="firstname.invalid && firstname.touched" 
+                    class="form-control" name="firstname" placeholder="First Name" [(ngModel)]="userservice.appointmentData.firstname"/>
+				</div>
+				</div>
+				<div class="col-6">
+					<!--  Last Name -->
+					<div class="form-group">
+						<label for="lastname">Last Name</label>
+						<input type="text" required #lastname="ngModel" [class.is-invalid]="lastname.invalid && lastname.touched" 
+                        class="form-control" name="lastname" placeholder="Last Name" [(ngModel)]="userservice.appointmentData.lastname"/>
+				    </div>
+				</div>
+        </div>
+
+		<div class="row">
+			<!--  Age -->
+			<div class="form-group col-3">
+                <label for="age">Age</label>
+                <input type="number" required min="16" max="60" #age="ngModel" [class.is-invalid]="age.invalid && age.touched" 
+                class="form-control" name="age" placeholder="Age" [(ngModel)]="userservice.appointmentData.age"/>
+            </div>
+            <!--  Phone Number -->
+            <div class="form-group col-9">
+                <label for="phonenumber">Phone Number</label>
+                <input type="tel" required #phonenumber="ngModel" pattern="^\d{10}$" [class.is-invalid]="phonenumber.invalid && phonenumber.touched" 
+                class="form-control" name="phonenumber"placeholder="Phone Number" [(ngModel)]="userservice.appointmentData.phonenumber"/>
+            </div>
+        </div>
+
+        <div class="row">
+        <!--  Email -->
+            <div class="form-group col-12">
+                <label for="email">Email</label>
+                <input type="email" required #phonenumber="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" [class.is-invalid]="phonenumber.invalid && phonenumber.touched"
+                 class="form-control" name="email" placeholder="Email" [(ngModel)]="userservice.appointmentData.email"/>
+            </div>
+        </div>
+
+        <div class="row">
+        <!-- Street Address -->
+            <div class="form-group col-12">
+                <label for="streetaddress">Street</label>
+                <input type="text" required #streetaddress="ngModel" [class.is-invalid]="streetaddress.invalid && streetaddress.touched" 
+                class="form-control" name="streetaddress" placeholder="Street Address" [(ngModel)]="userservice.appointmentData.streetaddress"/>
+            </div>
+        </div>
+
+        <div class="row">
+			<!--  City -->
+			<div class="form-group col-6">
+                <label for="city">City</label>
+                <input type="text" required #city="ngModel" [class.is-invalid]="city.invalid && city.touched" 
+                 class="form-control" name="city" placeholder="City" [(ngModel)]="userservice.appointmentData.city"/>
+            </div>
+            <!-- State -->
+            <div class="form-group col-6">
+                <label for="state">State</label>
+                <input type="text" required #state="ngModel" [class.is-invalid]="state.invalid && state.touched" 
+                 class="form-control" name="state" placeholder="State" [(ngModel)]="userservice.appointmentData.state"/>
+            </div>
+        </div>            
+		
+        <div class="row">
+			<!--  Country -->
+			<div class="form-group col-6">
+                <label for="country">Country</label>
+                <input type="text" required #country="ngModel" [class.is-invalid]="country.invalid && country.touched" 
+                class="form-control" name="country" placeholder="Country" [(ngModel)]="userservice.appointmentData.country"/>
+            </div>
+            <!-- Pincode -->
+            <div class="form-group col-6">
+                <label for="pincode">Pincode</label>
+                <input type="number" required min= "0" pattern="^\d{6}$" #pincode="ngModel" [class.is-invalid]="pincode.invalid && pincode.touched" 
+                class="form-control" name="pincode" placeholder="Pincode" [(ngModel)]="userservice.appointmentData.pincode"/>
+            </div>
+        </div>
+
+        <div class="row">
+        <!--  TrainerPreference -->
+            <div class="form-group col-12">
+                <label for="trainerreference">TrainerPreference</label>
+                <input type="text" required #trainerreference="ngModel" [class.is-invalid]="trainerreference.invalid && trainerreference.touched" 
+                class="form-control" name="trainerreference" placeholder="Male/Female" [(ngModel)]="userservice.appointmentData.trainerreference"/>
+            </div>
+        </div>
+
+        <div class="row">
+        <!-- physiotherapist -->
+            <div class="form-group col-12">
+                <label for="physiotherapist">Physiotherapist</label>
+                <input type="text" required #physiotherapist="ngModel" [class.is-invalid]="physiotherapist.invalid && physiotherapist.touched" 
+                class="form-control" name="physiotherapist" placeholder="Yes/No" [(ngModel)]="userservice.appointmentData.physiotherapist"/>
+            </div>
+        </div>
+
+         <div class="row">
+        <!--  Packages -->
+            <div class="form-group col-12">
+                <label for="packages">Packages</label>
+                <input type="number" required #packages="ngModel" [class.is-invalid]="packages.invalid && packages.touched" 
+                class="form-control" name="packages" placeholder="Packages" [(ngModel)]="userservice.appointmentData.packages"/>
+            </div>
+        </div>
+
+        <div class="row">
+			<!--  INR -->
+			<div class="form-group col-6">
+                <label for="inr">INR</label>
+                <input type="number" required #inr="ngModel" [class.is-invalid]="inr.invalid && inr.touched" 
+                class="form-control" name="inr" placeholder="inr" [(ngModel)]="userservice.appointmentData.inr"/>
+            </div>
+            <!-- Paisa -->
+            <div class="form-group col-6">
+                <label for="paisa">Paisa</label>
+                <input type="number" required #paisa="ngModel" [class.is-invalid]="paisa.invalid && paisa.touched" 
+                class="form-control" name="paisa" placeholder="paisa" [(ngModel)]="userservice.appointmentData.paisa"/>
+            </div>
+        </div>
+
+		<div class="row my-4">
+			<div class="col-12">
+				<button class="btn btn-block btn-success" type="submit" (click) = "createandUpdate(userservice.appointmentData)">Submit</button>
+			</div>
+		</div>
+	</form>
+
+</div>

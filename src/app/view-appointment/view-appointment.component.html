@@ -1,0 +1,39 @@
+<div class="table-responsive">
+    <table class="table table-stripped table-hover">
+        <thead>
+            <tr>
+                <th scope="col" class="h6">Sr.no</th>
+                <th scope="col" class="h6">Name</th>
+                <th scope="col" class="h6">Age</th>
+                <th scope="col" class="h6">Phone</th>
+                <th scope="col" class="h6">Email</th>
+                <th scope="col" class="h6">Address</th>
+                <th scope="col" class="h6">TrainerPreference</th>
+                <th scope="col" class="h6">Physiotherapist</th>
+                <th scope="col" class="h6">Package</th>
+                <th scope="col" class="h6">INR.Paisa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let obj of appointmentList">
+                <td>{{obj.id}}</td>
+                <td>{{obj.firstname}} {{obj.lastname}} </td> 
+                <td>{{obj.age}}</td>
+                <td>{{obj.phonenumber}}</td>
+                <td>{{obj.email}}</td>
+                <td>{{obj.streetaddress}}, {{obj.city}}-{{obj.pincode}}, {{obj.state}}, {{obj.country}}</td>
+                <td>{{obj.trainerpreference}}</td>
+                <td>{{obj.physiotherapist}}</td>
+                <td>{{obj.package}}</td>
+                <td>{{obj.inr}}.{{obj.paisa}}</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" (click) = "edit(obj)">Edit</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm" (click)="deleteAppointment(obj.id)">Delete</button>
+                </td>            
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
